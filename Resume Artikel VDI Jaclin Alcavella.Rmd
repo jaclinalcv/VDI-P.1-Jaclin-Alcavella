@@ -1,0 +1,88 @@
+---
+title: "Visualisasi Data"
+author: "Jaclin Alcavella"
+date: "2024-08-30"
+output:
+  html_document: default
+  pdf_document: default
+---
+
+# Tugas Resume Artikel VDI
+
+Jaclin Alcavella (122450015) RC
+
+Judul Artikel = Making data visualization more efficient and effective: a survey
+
+Penulis = Xuedi Qin, Yuyu Luo & Guoliang Li
+
+Jurnal = The VLDB Journal
+
+Volume & Halaman = Vol. 29, halaman 93-117
+
+Tahun = 2020
+
+### Abstrak
+
+Secara khusus, artikel ini membahas peran penting visualisasi data dalam mendukung pengambilan keputusan di dunia bisnis yang semakin berbasis data. Meskipun visualisasi dapat “mengubur” data kompleks menjadi semacam gambar, ini dapat dikatakan membantu menginterpretasikan data kompleks dengan cara-cara yang lebih mudah dipahami oleh manusia. Namun, tingginya permintaan atas pemrosesan data dalam jumlah besar dan dengan kecepatan semakin cepat, membuat visualisasi effisien dan efektif visualisasi menjadi suatu tantangan. Artikel ini membahas spesifikasi dan teknik-teknik yang efisien untuk visualisasi data, juga proses manajemen visualisasi, dan rekomendasi visualisasi otomatis.
+
+### Latar Belakang
+
+Saat ini, organisasi memiliki lebih banyak data, sebagian besar data digunakan untuk mendukung keputusan strategis dan operasional. Visualisasi data memiliki peran penting karena secara efektif dapat mengubah klaster data menjadi visualisasi informatif, seperti grafik batang, garis, titik, atau warna. Adopsi visualisasi data terbantu oleh komunitas yang terkait, seperti grafis komputer, visualisasi interaktif, dan basis data. Peningkatan visualisasi dapat dilihat sebagai tantangan utama adalah bagaimana dapat lebih mudah membuat proses visualisasi dan dapat menangani berbagai macam data yang besar dan kompleks.
+
+1.  Spesifikasi visualisasi menjelaskan tetang cara pengguna menentukan kebutuhan untuk menghasilkan visualisasi.
+
+2.  Pendekatan yang efisien untuk visualisasi data menjelaskan proses data dan spesifikasi yang diberikan secara visual, lalu akan menghasilkan visualisasi supaya efisien dan efektif.
+
+3.  Visualisasi data rekomendasi menjelaskan tentang kelengkapan spesifikasi tidak lengkap secara langsung.
+
+### Tujuan
+
+Artikel ini bertujuan untuk mengidentifikasi dan merangkum teknik yang berkontribusi membuat visualisasi data lebih efisien dan efektif, yang dapat relevan bagi data bese pengguna dan peneliti basis data. Yang berfokus pada spesifikasi visualisasi, cara lebih efisien dalam memproses visualisasi data, dan sistem rekomendasi visualisasi yang dapat membantu pengguna menemukan atau melengkapi visualisasi yang mereka sukai. Selain itu, kita dapat mengetahui alat yang digunakan dalam memvisualisasikan data dan informasi.
+
+### Metodologi
+
+Peneliti melakukan survei literatur dari berbagai teknik yang dapat digunakan dalam visualisasi data. Adapun metodologi penelitian yang digunakan oleh peneliti adalah deskriptif kualitatif. Metode yang dipakai antara lain analisis pipeline dan visualisasi data yang diantaranya: tahap import dan persiapan data, manipulasi data, pemetaan data ke elemen visual dan terakhir rendering visualisasi. Selain itu artikel ini juga membahas spesifikasi bahasa visualisasi, teknik-teknik untuk mempercepat proses visualisasi, serta sistem rekomendasi visualisasi yang sudah ada.
+
+### Hasil
+
+#### **1.Berkembangnya Cara Untuk Memvisualisasikan Data**
+
+Visualisasi data dapat menjelaskan gambaran umum untuk data, apalagi untuk masa sekarang yang memiliki data yang lebih banyak dari sebelumnya. Adapun aplikasi yang dapat membuat visualisasi data antara lain : Excel, Google Sheet, Oracle, IBM DB2, Amazon Quicksight, Microsoft Power BI, dan lainnya.
+
+#### 2. Spesifikasi Visualisasi Spesifikasi.
+
+Visualisasi adalah proses yang memungkinkan pengguna untuk menentukan apa yang ingin mereka lihat dalam sebuah visualisasi. Ini termasuk berbagai bahasa dan alat yang membantu pengguna menciptakan dan berinteraksi dengan visualisasi. Terlebih lagi, spesifikasi ini memainkan peran penting dalam mengaitkan data dengan elemen visual yang sesuai.
+
+**Bahasa Visualisasi Rendah** : Bahasa Visualisasi Rendah, seperti D3.js dan Vega, mensyaratkan pengguna untuk menentukan setiap rincian dari elemen visual dengan cara yang eksplisit termasuk ukuran, warna, dan interaksi. Jadi, bahasa ini memberikan fleksibilitas tinggi tetapi membutuhkan pengetahuan teknis yang mendalam.
+
+**Bahasa Visualisasi Tinggi** : Contoh bahasa ini adalah ggplot2 dan Vega-Lite, yang lebih mudah digunakan karena pengguna hanya perlu menentukan apa yang ingin mereka lihat, dan sistem akan menangani rincian dari implementasi dengan sendirinya. Bahasa ini mengurangi kesulitan teknis dan sesuai dengan pengguna yang tidak memiliki keterampilan dalam pemrograman tingkat lanjut.
+
+**Alat Visual Berbasis GUI** : Tableau, Microsoft Power BI, dan Google Sheets, antara lain, adalah alat yang memungkinkan penggunaan pendekatan antarmuka grafis seperti menarik dan melepaskan elemen data untuk membuat visualisasi tanpa merujuk ke kode. Alat ini mempermudah penggunaan non-teknis ketika datang ke visualisasi namun biasa memiliki atas kerangka tata letak dan pustaka default.
+
+#### 3. Pendekatan Efisien Untuk Visualisasi
+
+Efisiensi dalam visualisasi data merupakan kebutuhan penting untuk memberikan pengalaman interaktif yang responsif, terutama saat berhadapan dengan data besar. Berikut beberapa teknik pembahasan utama :
+
+**Integrasi Sistem Visualisasi dengan Basis Data :** Teknik yang menghubungkan sistem visualisasi dengan mesin basis data untuk mempercepat pengambilan dan pemrosesan data. Misalnya, Ermac dan DeVIL yang merupakan sistem manajemen visualisasi data untuk menggabungkan data yang diambil dalam satu sistem.
+
+**Penyimpanan Kolom (Column Stores)** : Teknik yang berguna untuk menyimpan data dalam format kolom yang lebih efisien untuk operasi analitik yang hanya membutuhkan sebagian kolom data. Misalnya, SeeDB dan Tableau Data Engine (TDE).
+
+**Indeks** : Peran indeks dalam penyelesaian masalah kebutuhan responsif, seperti menggunakan struktur pohon dan datacubes untuk mempercepat pencarian dan pemprosesan data untuk visualisasi. Misalnya, imMens dan Nanocubes yang membangun indeks hierarki untuk data agregasi real-time dan mengurangi pemrosesan data mentah.
+
+**Komputasi Paralel** : Teknik yang berfungsi untuk menjalankan kueri visualisasi bersama dan membuat visualisasi dengan cepat menggunakan prosesor multi-core. Misalnya, Sistem SeeDB untuk evalusai kueri visualisasi pada proses berurut.
+
+**Prediksi dan Prefetching** : Teknik yang berfungsi memprediksi langkah berikutnya dalam pencarian data dan memuat data relevan untuk mempercepat interaksi. Misalnya, ForeCache untuk memprediksi pola navigasi dan mengurangi waktu pemrosesan.
+
+#### 4. Rekomendasi Visualisasi
+
+Rekomendasi visualisasi adalah proses membantu pengguna menemukan atau melengkapi visualisasi yang mereka butuhkan, sering kali berdasar spesifikasi yang tidak lengkap atau contoh visualisasi referensi.
+
+**Rekomendasi Berbasis Spesifikasi**: Sistem seperti APT dan Voyager memberikan rekomendasi visualisasi berdasarkan spesifikasi sebagian, seperti kolomke kolom yang dipilih atau tipe visualisasi yang diminta.
+
+**Pembelajaran Mesin untuk Rekomendasi**: Sistem seperti DeepEye menggunakan model pembelajaran untuk rekomendasi rapih yang menggunakan data untuk merekomendasikan visualisasi terbaik yang sesuai dengan yang sebelumnya dipelajari. Sistem ini dapat memberikan saran yang lebih adaptif dan relevan.
+
+**Penggunaan Aturan dan Preferensi Persepsi**: Sistem menggunakan aturan berbasis persepsi manusia untuk mencari visualisasi yang paling optimal, seperti aturan data temporal lebih baik divisualisasikan dalam grafik garis daripada grafik batang.
+
+### Kesimpulan
+
+Dalam artikel ini, penulis terutama telah mendiskusikan karya visualisasi data terbaru dari perspektif manajemen data. Secara khusus, penulis telah secara menyeluruh mendeskripsikan karya dalam spesifikasi visualisasi, metode efisien untuk visualisasi data, serta rekomendasi visualisasi. Sebagian besar sistem visualisasi data yang tersedia di pasar komersial sangat baik dalam hal spesifikasi data ion. Namun, banyak praktisi masih mengalami kewaspadaan masalah kinerja dan rekomendasi dari sistem ini. Penulis mencapai kesimpulan dalam artikel ini bahwa untuk membuat visualisasi data yang efisien dan efektif, semua elemen yang disebutkan perlu adanya integrasi spesifikasi, visualisasi, pendekatan dalam pengolahan cepat, dan rekomendasi nilai visualisasi. Teknik-teknik semacam itu dapat meningkatkan kinerja sistem visualisasi yang juga memperkaya pengalaman pengguna ketika menavigasi data.
